@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  a(href=`/new`): button= "New message"
+  div
+    each message in messages
+      div.message
+        p= message.user
+        p= message.text
+        p= message.added
+    else
+      p There are no values
